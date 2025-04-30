@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="flex h-14 items-center border-b px-4">
           <Link href="/" className="flex items-center gap-2 font-semibold">
             <BuildingIcon className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Mifos</span>
+            <span className="text-xl font-bold">kartapay</span>
           </Link>
         </div>
         <div className="flex-1 overflow-auto py-2">
@@ -26,8 +26,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               href="#"
               className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all"
             >
-              <UserIcon className="h-4 w-4" />
-              Clients
+              <CreditCardIcon className="h-4 w-4" />
+              Mes comptes
             </Link>
             <Link
               href="#"
@@ -89,7 +89,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <div>
               <p className="text-sm font-medium">Admin</p>
-              <p className="text-xs text-muted-foreground">admin@mifos.org</p>
+              <p className="text-xs text-muted-foreground">admin@kartapay.org</p>
             </div>
           </div>
         </div>
