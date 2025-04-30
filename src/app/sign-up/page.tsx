@@ -37,7 +37,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import { cn } from "@/lib/utils";
@@ -281,17 +280,22 @@ export default function SignupPage() {
                           </Button>
                         </PopoverTrigger>
                         <PopoverContent className="w-auto p-0" align="start">
-                          <Calendar
-                            mode="single"
-                            selected={date}
-                            onSelect={handleDateSelect}
-                            initialFocus
-                            locale={fr}
-                            captionLayout="dropdown-buttons"
-                            fromYear={1940}
-                            toYear={2010}
-                            className="rounded-md border"
-                          />
+                          <div className="space-y-2">
+                            <Label
+                              htmlFor="dateOfBirth"
+                              className="text-slate-700"
+                            >
+                              Date de naissance
+                              <RequiredField />
+                            </Label>
+                            <Input
+                              id="dateOfBirth"
+                              type="date"
+                              className="h-12 border-slate-200 focus:border-primary focus:ring-1 focus:ring-primary"
+                              required
+                              max={new Date().toISOString().split("T")[0]}
+                            />
+                          </div>
                         </PopoverContent>
                       </Popover>
                     </div>
@@ -436,9 +440,7 @@ export default function SignupPage() {
                       </div>
 
                       {fileSelected && (
-                        <div
-                          className="mt-4 flex items-center gap-3 rounded-lg bg-primary/5 p-3 text-sm text-primary"
-                        >
+                        <div className="mt-4 flex items-center gap-3 rounded-lg bg-primary/5 p-3 text-sm text-primary">
                           <CheckIcon className="h-5 w-5" />
                           <div className="flex flex-1 items-center">
                             <span>Fichier prêt à être envoyé</span>
@@ -456,9 +458,7 @@ export default function SignupPage() {
                       )}
 
                       {fileError && (
-                        <div
-                          className="mt-2 rounded-lg bg-red-50 p-3 text-sm text-red-600"
-                        >
+                        <div className="mt-2 rounded-lg bg-red-50 p-3 text-sm text-red-600">
                           {fileError}
                         </div>
                       )}
