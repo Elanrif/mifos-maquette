@@ -108,7 +108,7 @@ export default function SignupPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Ici, vous pourriez envoyer les données à votre API Mifos
+    // Ici, vous pourriez envoyer les données à votre API kartapay
     console.log("Données du formulaire:", formData);
     // Redirection ou affichage d'un message de succès
   };
@@ -125,12 +125,12 @@ export default function SignupPage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary">
               <BuildingIcon className="h-6 w-6" />
             </div>
-            <span className="text-xl font-bold">Mifos</span>
+            <span className="text-xl font-bold">kartapay</span>
           </Link>
         </div>
 
         <div className="flex-1 flex flex-col justify-center px-6 py-10">
-          <h2 className="text-2xl font-bold mb-4">Bienvenue chez Mifos</h2>
+          <h2 className="text-2xl font-bold mb-4">Bienvenue chez kartapay</h2>
           <p className="text-white/80 mb-8">
             Rejoignez notre communauté financière et accédez à nos services
             bancaires innovants.
@@ -166,8 +166,8 @@ export default function SignupPage() {
               <UserIcon className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-sm font-medium">Support Mifos</p>
-              <p className="text-xs text-white/70">support@mifos.org</p>
+              <p className="text-sm font-medium">Support kartapay</p>
+              <p className="text-xs text-white/70">support@kartapay.org</p>
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ export default function SignupPage() {
                 </CardTitle>
                 <CardDescription>
                   Veuillez remplir tous les champs obligatoires pour créer votre
-                  compte client Mifos
+                  compte client kartapay
                 </CardDescription>
               </CardHeader>
 
